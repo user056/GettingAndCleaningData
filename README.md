@@ -10,7 +10,7 @@ The script `run_analysis.R` uses the following hard coded local filesystem paths
 * setwd("C:/Users/marc/Documents/coursera-RR/course03")
 * data_input_folder <- file.path(getwd(), "UCI HAR Dataset")
 
-Afterwards as usual, it is needed to source the R file. To execute the script, call it with 'course3()'
+Afterwards as usual, it is needed to source the R file. To execute the script, it can be called with `course3()`
 
 
 ##Results
@@ -20,7 +20,7 @@ After the script finished, there will be an tidy data set available in your work
 
 ##How it works
 
-1) Loads all the provided data files from the Samsung data set and merge them into one data set.
+1) The script loads all the provided data files from the Samsung data set and merge them into one data set.
 
 ```R
 ##Merges the training and the test sets to create one data set        
@@ -42,7 +42,7 @@ After the script finished, there will be an tidy data set available in your work
         merged.data <- rbind(train.data, test.data)
 ```
 
-2) Adjusts the column names to match the lables for colums proveded in the `features.txt` file.
+2) The script adjusts the column names to match the lables for columns proveded in the `features.txt` file.
 
 ```R
 ##Uses descriptive activity names to name the activities in the data set
@@ -54,7 +54,7 @@ After the script finished, there will be an tidy data set available in your work
         merged.final <- cbind(merged.sub.act, merged.data)
 ```
 
-3) Cleans the data set from not needed columns. Only the columns in the data set are of interest which represents `mean` or `std` obervations. Also keeps the column `subject` and `activity` in the cleaned data set.
+3) The script cleans the data set from not needed columns. Only the columns in the data set are of interest which represents `mean` or `std` obervations. Also keeps the column `subject` and `activity` in the cleaned data set.
 
 ```R
 ##Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -70,7 +70,7 @@ After the script finished, there will be an tidy data set available in your work
         cleaned.data$activity <- mapvalues(cleaned.data$activity, from = c("1","2","3","4","5","6"), to = c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
 ```
 
-5) Creates the tidy data set and saves it to a file to finish the assignment.
+5) The script creates the tidy data set and saves it to a file to finish the assignment.
 
 ```R
 ##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
