@@ -20,7 +20,7 @@ After the script finished, there will be an tidy data set available in your work
 
 ##How it works
 
-1) Load all the provided data files from the Samsung data set and merge them into one data set.
+1) Loads all the provided data files from the Samsung data set and merge them into one data set.
 
 ```R
 ##Merges the training and the test sets to create one data set        
@@ -41,4 +41,44 @@ After the script finished, there will be an tidy data set available in your work
 
         merged.data <- rbind(train.data, test.data)
 ```
+
+2) Adjusts the column names to match the lables for colums proveded in the `features.txt` file.
+
+```R
+##Uses descriptive activity names to name the activities in the data set
+        features <- read.table(file.path(data_input_folder,"features.txt"),header=FALSE)
+        colnames(features) <- c("Feature.Index","Feature.Name")
+        
+        colnames(merged.data) <- features$Feature.Name
+        
+        merged.final <- cbind(merged.sub.act, merged.data)
+```
+
+3) Cleans the data set from not needed columns. Only the columns in the data set are of interest which represents `mean` or `std` obervations. Also keeps the column `subject` and `activity` in the cleaned data set.
+
+```R
+##Extracts only the measurements on the mean and standard deviation for each measurement. 
+        cleaned.data <- merged.final[,grep("mean\\(\\)|std\\(\\)|activity|subject",colnames(merged.final))]
+```
+
+4) Substitute the numeric values in column activity with related labels provided from the mapping file `activity_labels.txt`
+
+```R
+##Appropriately labels the data set with descriptive variable names. 
+        label.activity <- read.table(file.path(data_input_folder, "activity_labels.txt"),header=FALSE)
+
+        cleaned.data$activity <- mapvalues(cleaned.data$activity, from = c("1","2","3","4","5","6"), to = c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
+```
+
+5) Creates the tidy data set and saves it to a file to finish the assignment.
+
+```R
+##From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+        formated.data <- data.table(cleaned.data)
+        data.tidy<-formated.data[,lapply(.SD,mean),by="activity,subject"]
+        write.table(data.tidy,file="coursera_tidy_data.txt",sep=",",row.names = FALSE)
+```
+
+
 
