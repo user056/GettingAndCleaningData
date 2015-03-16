@@ -12,8 +12,14 @@ This Codebook describes a shortened data set with a subset of extracted columns 
 
 ##Description Variables
 
--Unit of column `subject` is int 1:30
--Unit of COLUMN `activity` is one of the following value: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+- Unit of column `subject` is int 1:30
+- Unit of COLUMN `activity` is one of the following value:
+  * WALKING,
+  * WALKING_UPSTAIRS,
+  * WALKING_DOWNSTAIRS, 
+  * SITTING, 
+  * STANDING, 
+  * LAYING
 - Unit of all other falues is floating numbers 
 
 
