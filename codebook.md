@@ -30,28 +30,28 @@ This Codebook describes a shortened data set with a subset of extracted columns 
 | tGravityAcc-std()-X	 |  Body GravityAcc std value for axial signals in the X direction	           |
 | tGravityAcc-std()-Y	 | Body GravityAcc std value for axial signals in the Y direction	            |
 | tGravityAcc-std()-Z	 | Body GravityAcc std value for axial signals in the Z direction	            |
-| tBodyAccJerk-mean()-X	 |Body BodyAccJerk mean value for axial signals in the X direction	             |
-| tBodyAccJerk-mean()-Y	 |Body BodyAccJerk mean value for axial signals in the Y direction       |
-| tBodyAccJerk-mean()-Z	 |Body BodyAccJerk mean value for axial signals in the Z direction       |
-| tBodyAccJerk-std()-X	 |       |
-| tBodyAccJerk-std()-Y	 |       |
-| tBodyAccJerk-std()-Z	 |       |
-| tBodyGyro-mean()-X	 |       |
-| tBodyGyro-mean()-Y	 |       |
-| tBodyGyro-mean()-Z	 |       |
-| tBodyGyro-std()-X	 |       |
-| tBodyGyro-std()-Y	 |       |
-| tBodyGyro-std()-Z	 |       |
-| tBodyGyroJerk-mean()-X	 |       |
-| tBodyGyroJerk-mean()-Y	 |       |
-| tBodyGyroJerk-mean()-Z	 |       |
-| tBodyGyroJerk-std()-X	 |       |
-| tBodyGyroJerk-std()-Y	 |       |
-| tBodyGyroJerk-std()-Z	 |       |
-| tBodyAccMag-mean()	 |       |
-| tBodyAccMag-std()	 |       |
-| fBodyBodyAccJerkMag-std()	 |       |
-| fBodyBodyGyroMag-mean()	 |       |
-| fBodyBodyGyroMag-std()	 |       |
-| fBodyBodyGyroJerkMag-mean()	 |       |
-| fBodyBodyGyroJerkMag-std() |       |
+| tBodyAccJerk-mean()-X	 |Body AccJerk mean value for axial signals in the X direction	             |
+| tBodyAccJerk-mean()-Y	 |Body AccJerk mean value for axial signals in the Y direction       |
+| tBodyAccJerk-mean()-Z	 |Body AccJerk mean value for axial signals in the Z direction       |
+| tBodyAccJerk-std()-X	 |Body AccJerk std value for axial signals in the X direction              |
+| tBodyAccJerk-std()-Y	 |Body AccJerk std value for axial signals in the Y direction                     |
+| tBodyAccJerk-std()-Z	 |Body AccJerk std value for axial signals in the Z direction                     |
+| tBodyGyro-mean()-X	 | Body Gyro mean value for axial signals in the X direction                    |
+| tBodyGyro-mean()-Y	 | Body Gyro mean value for axial signals in the Y direction                           |
+| tBodyGyro-mean()-Z	 | Body Gyro mean value for axial signals in the Z direction                           |
+| tBodyGyro-std()-X	 | Body Gyro std value for axial signals in the X direction                           |
+| tBodyGyro-std()-Y	 | Body Gyro mean value for axial signals in the Y direction                           |
+| tBodyGyro-std()-Z	 |  Body Gyro mean value for axial signals in the Z direction                          |
+| tBodyGyroJerk-mean()-X	 | Body GyroJerkmean mean value for axial signals in the X direction                           |
+| tBodyGyroJerk-mean()-Y	 | Body GyroJerkmean mean value for axial signals in the Y direction                                 |
+| tBodyGyroJerk-mean()-Z	 | Body GyroJerkmean mean value for axial signals in the Z direction                                 |
+| tBodyGyroJerk-std()-X	 |Body GyroJerkmean std value for axial signals in the X direction                                  |
+| tBodyGyroJerk-std()-Y	 | Body GyroJerkmean std value for axial signals in the X direction                                        |
+| tBodyGyroJerk-std()-Z	 | Body GyroJerkmean mean value for axial signals in the Z direction                                        |
+| tBodyAccMag-mean()	 | Body AccMag mean value   |
+| tBodyAccMag-std()	 | Body AccMag std value |
+| fBodyBodyAccJerkMag-std()	 | Body AccJerkMag std value  |
+| fBodyBodyGyroMag-mean()	 | Body GyroMag mean value   |
+| fBodyBodyGyroMag-std()	 |Body GyroMag std value    |
+| fBodyBodyGyroJerkMag-mean()	 |Body GyroJerkMag mean value  |
+| fBodyBodyGyroJerkMag-std() | Body GyroJerkMag std value  |
