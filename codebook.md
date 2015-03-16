@@ -10,9 +10,12 @@ This Codebook describes a shortened data set with a subset of extracted columns 
 
 
 
-
-
 ##Description Variables
+
+-Unit of column `subject` is int 1:30
+-Unit of COLUMN `activity` is one of the following value: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+- Unit of all other falues is floating numbers 
+
 
 | Variable        | Description |         
 | ------------- |:-------------:|
@@ -55,3 +58,8 @@ This Codebook describes a shortened data set with a subset of extracted columns 
 | fBodyBodyGyroMag-std()	 |Body GyroMag std value    |
 | fBodyBodyGyroJerkMag-mean()	 |Body GyroJerkMag mean value  |
 | fBodyBodyGyroJerkMag-std() | Body GyroJerkMag std value  |
+
+
+##More information
+Check the `README.md` file for further details about this dataset. 
+
